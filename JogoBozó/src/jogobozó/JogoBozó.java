@@ -13,7 +13,7 @@ public class JogoBozó {
         p1.jogaDado(cincoDados);
         for(jogadas=0;jogadas<2;jogadas++){
             Scanner reader = new Scanner(System.in);
-            System.out.println("Deseja trocar algum dado?(0=Não, 1=Sim)");
+            System.out.println("Deseja trocar algum dado?(Não(0), Sim(1)");
             int r = reader.nextInt();
             if (r==0){
                 System.out.println("Jogada finalizada.");
@@ -22,6 +22,7 @@ public class JogoBozó {
                 p1.voltaDado(cincoDados);
             }
         }
+        p1.palpite();
         
         //p1.jogaDado(cincoDados);
         
