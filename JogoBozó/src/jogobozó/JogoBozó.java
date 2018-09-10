@@ -1,18 +1,30 @@
-
 package jogobozó;
+import java.util.Scanner;
 public class JogoBozó {
     public static void main(String[] args) {
-        Dado d1, d2, d3, d4, d5;
-        d1 = new Dado();
-        d2 = new Dado();
-        d3 = new Dado();
-        d4 = new Dado();
-        d5 = new Dado();
-        Jogador p1, p2;
+        int jogadas ;
+        Dado [] cincoDados;
+        cincoDados = new Dado[5];       
+        Jogador p1;
         p1 = new Jogador();
-        p2 = new Jogador();  
-        p1.jogaDado(d1, d2, d3, d4, d5);
-        p2.jogaDado(d1, d2, d3, d4, d5);
-        p1.voltaDado(d1);
+        for (int i=0;i<5;i++){
+            cincoDados[i] = new Dado(6);
+        }
+        p1.jogaDado(cincoDados);
+        for(jogadas=0;jogadas<2;jogadas++){
+            Scanner reader = new Scanner(System.in);
+            System.out.println("Deseja trocar algum dado?(0=Não, 1=Sim)");
+            int r = reader.nextInt();
+            if (r==0){
+                System.out.println("Jogada finalizada.");
+            }
+            else{
+                p1.voltaDado(cincoDados);
+            }
+        }
+        
+        //p1.jogaDado(cincoDados);
+        
+
     }    
 }
