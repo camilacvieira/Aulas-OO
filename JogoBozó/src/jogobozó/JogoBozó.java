@@ -6,7 +6,7 @@ public class JogoBozó {
         Dado [] cincoDados;
         cincoDados = new Dado[5];       
         Jogador p1;
-        p1 = new Jogador();
+        p1 = new Jogador("camila");
         for (int i=0;i<5;i++){
             cincoDados[i] = new Dado(6);
         }
