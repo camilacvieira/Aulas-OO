@@ -1,2 +1,2 @@
-# Bozo
-Jogo Bozó em java
+# Repositório para aula de Orientação a objeto 
+
